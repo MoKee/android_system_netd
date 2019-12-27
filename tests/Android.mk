@@ -21,7 +21,7 @@ LOCAL_MODULE := netd_integration_test
 LOCAL_COMPATIBILITY_SUITE := device-tests
 LOCAL_CFLAGS := -Wall -Werror -Wunused-parameter
 # Bug: http://b/29823425 Disable -Wvarargs for Clang update to r271374
-LOCAL_CFLAGS += -Wno-varargs
+LOCAL_CFLAGS += -Wno-varargs -Wno-sign-compare
 
 EXTRA_LDLIBS := -lpthread
 LOCAL_SHARED_LIBRARIES += libbase libbinder libbpf libcrypto libcutils liblog \
